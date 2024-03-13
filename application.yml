@@ -10,7 +10,7 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://mysql-petclinic-71b7c3.mysql.database.azure.com:3306/petclinic?useSSL=true&serverTimezone=UTC
-    username: mysql_26fff
+    username:aad_mysql_26fff
     azure.passwordless-enabled: true
   sql:
     init:
