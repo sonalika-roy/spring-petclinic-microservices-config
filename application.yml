@@ -62,5 +62,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+    enableSelfPreservation: false
   instance:
     preferIpAddress: true
