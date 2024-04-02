@@ -66,4 +66,4 @@ eureka:
     enableSelfPreservation: false
   instance:
     preferIpAddress: true
-    lease-renewal-interval-in-seconds=0
+    lease-renewal-interval-in-seconds: 0
