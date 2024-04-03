@@ -10,8 +10,8 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://mysql-petclinic-647955.mysql.database.azure.com:3306/petclinic?useSSL=true
-    username: myadmin
-    password: CIOPASS1ciopass1
+    username: aad_mysql_conn
+    azure.passwordless-enabled: true
   sql:
     init:
       schema-locations: classpath*:db/mysql/schema.sql
@@ -64,6 +64,8 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka/
     wait-time-in-ms-when-sync-empty: 0
     enableSelfPreservation: false
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 120 # Increase this value as needed
   instance:
     preferIpAddress: true
-    lease-renewal-interval-in-seconds: 0
+
