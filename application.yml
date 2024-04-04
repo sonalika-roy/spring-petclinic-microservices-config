@@ -8,29 +8,6 @@ server:
  
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
-  cloud:  
-    stream: 
-      bindings:
-        supply-out-0:
-          destination: telemetry
-      binders:
-        eventhub:
-          type: eventhubs
-          default-candidate: true
-          environment:
-            spring:
-              cloud:
-                azure:
-                  eventhubs:
-                    namespace: evhns-petclinic-647955
-      poller:
-        initial-delay: 0
-        fixed-delay: 1000  
-    config:
-      # Allow the microservices to override the remote properties with their own System properties or config file
-      allow-override: true
-      # Override configuration with any local property source
-      override-none: true
   datasource:
     url: jdbc:mysql://mysql-petclinic-647955.mysql.database.azure.com:3306/petclinic?useSSL=true
     username: aad_mysql_conn
