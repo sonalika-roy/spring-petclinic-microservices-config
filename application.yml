@@ -22,7 +22,7 @@ spring:
               cloud:
                 azure:
                   eventhubs:
-                    namespace: <your-event-hub-namespace>
+                    namespace: evhns-petclinic-647955
       poller:
         initial-delay: 0
         fixed-delay: 1000  
